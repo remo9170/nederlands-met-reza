@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fbecdb">
+  <meta name="description" content="تمرین مکالمهٔ هلندی به فارسی از سطح A1، هر روز پنج سؤال صوتی.">
+  <title>هلندی با رضا</title>
+  <link rel="manifest" href="./app.webmanifest">
+  <link rel="icon" href="./assets/icon-192.png">
+  <link rel="apple-touch-icon" href="./assets/icon-192.png">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="13" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3m-4 0h8"/></symbol>
+    <symbol id="i-stop" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="3"/></symbol>
+    <symbol id="i-sound" viewBox="0 0 24 24"><path d="M3 9v6h4l5 4V5L7 9H3zm13 0a4 4 0 0 1 0 6m3-9a8 8 0 0 1 0 12"/></symbol>
+    <symbol id="i-slow" viewBox="0 0 24 24"><path d="M4 17h15M6 17c0-5 2-8 6-8s6 3 6 8m0-2 2-2h2M7 17l-1 3m10-3 1 3M4 17l-2-2"/></symbol>
+    <symbol id="i-keyboard" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M6 9h.1M10 9h.1M14 9h.1M18 9h.1M6 13h.1M10 13h.1M14 13h.1M18 13h.1M9 16h6"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 17v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4m10-4v4M3 10h18m-12 5h3"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 6c-3-3-7-3-10-1v14c3-2 7-2 10 1 3-3 7-3 10-1V5c-3-2-7-2-10 1v14"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M5 20v-5m7 5v-10m7 10V4" stroke-width="3.5"/></symbol>
+    <symbol id="i-coffee" viewBox="0 0 24 24"><path d="M4 10h13v4a6.5 6.5 0 0 1-13 0v-4zm13 1h2a2 2 0 0 1 0 4h-2M2 21h19M8 7c-2-2 2-2 0-4m5 4c-2-2 2-2 0-4"/></symbol>
+    <symbol id="i-hello" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H8l-5 3V6a2 2 0 0 1 1-2zM8 11h.1m4 0h.1m4 0h.1"/></symbol>
+    <symbol id="i-shop" viewBox="0 0 24 24"><path d="M4 8h16l1 13H3L4 8zm4 1V6a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-train" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="15" rx="4"/><path d="M5 11h14M9 15h.1m6 0h.1M8 18l-3 4m11-4 3 4"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11 1.5 1.5M19 5l-1.5 1.5m-11 11L5 19"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M20 12H5m6 6-6-6 6-6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+  </svg>
+  <div class="shell">
+    <header class="header">
+      <div class="brand"><img src="./assets/tulip.svg" alt="" width="43" height="52"><div><strong>هلندی با رضا</strong><small lang="nl" dir="ltr">Nederlands met Reza</small></div></div>
+      <img class="canal" src="./assets/canal.svg" alt="" width="315" height="90">
+      <button id="install" class="install" type="button"><svg><use href="#i-download"/></svg>نصب اپ</button>
+    </header>
+
+    <main id="main">
+      <section id="practice" aria-label="تمرین مکالمه">
+        <div class="progress-card">
+          <span class="level" lang="nl" dir="ltr">A1</span>
+          <div><small id="day-label">درس امروز</small><strong id="progress-label"></strong></div>
+          <div id="segments" class="segments" aria-hidden="true"></div>
+        </div>
+
+        <div class="scene">
+          <div class="cafe-art" aria-hidden="true"></div>
+          <div class="conversation">
+            <div class="lesson-tag">
+              <svg><use id="scene-icon" href="#i-coffee"/></svg>
+              <div><small id="scene-label">درس امروز</small><h1 id="lesson-title"></h1></div>
+            </div>
+            <div class="bubble">
+              <p id="question" lang="nl" dir="ltr" tabindex="-1"></p>
+              <div class="playback">
+                <button id="play" type="button"><svg><use href="#i-sound"/></svg>پخش سؤال</button>
+                <button id="slow" type="button"><svg><use href="#i-slow"/></svg>آهسته‌تر</button>
+              </div>
+            </div>
+            <details id="translation" class="translation">
+              <summary>ترجمهٔ فارسی</summary>
+              <p id="translation-text"></p>
+            </details>
+          </div>
+        </div>
+
+        <div class="actions">
+          <div id="answer-actions">
+            <button id="mic" class="button primary" type="button"><svg><use id="mic-icon" href="#i-mic"/></svg><span id="mic-label">پاسخ صوتی</span></button>
+            <button id="typing" class="button secondary" type="button"><svg><use href="#i-keyboard"/></svg>پاسخ تایپی</button>
+          </div>
+          <p id="status" class="status" role="status"></p>
+          <form id="answer-form" class="answer-form" hidden>
+            <label id="answer-label" for="answer">پاسخت را به هلندی بنویس</label>
+            <div><input id="answer" type="text" lang="nl" dir="ltr" maxlength="180" autocomplete="off" autocapitalize="none" spellcheck="false" required><button class="button primary" type="submit">بررسی پاسخ</button></div>
+          </form>
+          <section id="feedback" class="feedback" aria-live="polite" hidden>
+            <h2 id="feedback-title"></h2>
+            <p id="feedback-description"></p>
+            <p id="model-answer" class="model-answer" lang="nl" dir="ltr"></p>
+            <p id="model-translation"></p>
+            <div class="feedback-buttons">
+              <button id="next" class="button primary" type="button"><svg><use href="#i-arrow"/></svg><span id="next-label"></span></button>
+              <button id="retry" class="button secondary" type="button">دوباره امتحان کن</button>
+              <button id="play-model" class="button secondary" type="button"><svg><use href="#i-sound"/></svg>شنیدن نمونه</button>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section id="completion" class="panel completion" hidden>
+        <div class="round-icon"><svg><use href="#i-check"/></svg></div>
+        <p class="eyebrow">پایان تمرین</p>
+        <h1 id="completion-title" tabindex="-1">درس کامل شد!</h1>
+        <p id="completion-text"></p>
+        <div class="feedback-buttons">
+          <button id="view-progress" class="button primary" type="button">دیدن پیشرفت</button>
+          <button id="review" class="button secondary" type="button">مرور دوبارهٔ درس</button>
+        </div>
+      </section>
+
+      <section id="lesson-list" class="panel" hidden>
+        <p class="eyebrow">مسیر مکالمه • سطح A1</p>
+        <h1 tabindex="-1">درس‌ها</h1>
+        <p class="panel-copy">هر درس پنج سؤال دارد. می‌توانی درس‌های امروز و روزهای قبل را تمرین کنی.</p>
+        <ol id="lessons" class="lessons"></ol>
+      </section>
+
+      <section id="stats" class="panel" hidden>
+        <p class="eyebrow">مسیر مکالمه • سطح A1</p>
+        <h1 tabindex="-1">پیشرفت من</h1>
+        <p class="panel-copy">پیشرفت روی همین دستگاه ذخیره می‌شود.</p>
+        <div class="stats-grid">
+          <div><strong id="stat-lessons"></strong><span>درس کامل</span></div>
+          <div><strong id="stat-questions"></strong><span>سؤال تمرین‌شده</span></div>
+          <div><strong id="stat-days"></strong><span>روز تمرین</span></div>
+        </div>
+        <button id="back-today" class="button primary" type="button">بازگشت به تمرین امروز</button>
+      </section>
+    </main>
+
+    <nav class="nav" aria-label="منوی اصلی">
+      <button type="button" data-page="today" aria-current="page"><svg><use href="#i-calendar"/></svg>امروز</button>
+      <button type="button" data-page="lessons"><svg><use href="#i-book"/></svg>درس‌ها</button>
+      <button type="button" data-page="stats"><svg><use href="#i-chart"/></svg>پیشرفت</button>
+    </nav>
+    <footer><span lang="nl" dir="ltr">Een beetje Nederlands, elke dag.</span><span>هر روز کمی هلندی</span></footer>
+  </div>
+
+  <dialog id="install-dialog" class="install-dialog" aria-labelledby="install-title">
+    <form method="dialog"><button class="close" aria-label="بستن"><svg><use href="#i-close"/></svg></button></form>
+    <div class="round-icon"><svg><use href="#i-download"/></svg></div>
+    <h2 id="install-title">نصب هلندی با رضا</h2>
+    <p id="install-note"></p>
+    <dl>
+      <div><dt>آیفون و آیپد</dt><dd>در Safari، منوی اشتراک‌گذاری را باز کن و <bdi lang="en">Add to Home Screen</bdi> را بزن.</dd></div>
+      <div><dt>اندروید</dt><dd>در Chrome، منوی سه‌نقطه را باز کن و <bdi lang="en">Install app</bdi> یا <bdi lang="en">Add to Home screen</bdi> را انتخاب کن.</dd></div>
+      <div><dt>کامپیوتر</dt><dd>در Chrome یا Edge، گزینهٔ نصب را از نوار آدرس یا منوی مرورگر انتخاب کن.</dd></div>
+    </dl>
+  </dialog>
+  <script defer src="./lessons.js"></script>
+  <script defer src="./app.js"></script>
+</body>
+</html>
